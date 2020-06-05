@@ -21,7 +21,9 @@ class HomeController extends Controller {
     async getArticleById() {
         //先配置路由的动态传值，然后再接收值
         let id = this.ctx.params.id
-
+        let addCountSql = 
+            "UPDATE article SET view_count = view_count+1 WHERE id=" + id;
+        await this.app.mysql.query(addCountSql)
         let sql = 'SELECT article.id as id,' +
             'article.title as title,' +
             'article.introduce as introduce,' +
