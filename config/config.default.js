@@ -40,7 +40,6 @@ module.exports = appInfo => {
     domainWhiteList:['*']
   }
   config.cors = {
-    origin:'admin.blogwuyue.com',
     credentials:true, // cook跨域
     allowMethods:'GET,HEAD,PUT,DELETE,PATCH,OPTIONS'
   }

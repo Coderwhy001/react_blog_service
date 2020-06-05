@@ -52,7 +52,7 @@ class MainController extends Controller {
     let sql = 'select article.Id as id,' +
             'article.title as title,' +
             'article.introduce as introduce,' +
-            "from_unixtime(article.addTime,'%Y-%m-%d %H:%i:%s') as addTime," +
+            "from_unixtime(article.addTime,'%Y-%m-%d') as addTime," +
             'article.view_count as view_count ,' +
             'type.typeName as typeName ' +
             'from article left join type on article.type_id = type.id ' + 
